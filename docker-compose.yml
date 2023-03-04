@@ -1,0 +1,38 @@
+version: '3'
+services:
+  api:
+    build: .
+    volumes:
+      # - ./:/go/src/app
+      - ./:/go/src/github.com/yuta-hanyu/kakeibo-api
+    ports:
+      - "8082:8080"
+    tty: true
+    # env_file:
+    #   - ./src/app/environment/local.env
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_HOST: mysql
+      TZ: "Asia/Tokyo"
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --sql-mode="" --innodb_use_native_aio=0
+  # node:
+  #   image: node:14.17.3
+  #   ports:
+  #     - "3030:3000"
+  #   # ホストOSからアクセスできるように
+  #   environment:
+  #     - HOST=0.0.0.0
+  #   volumes:
+  #     - ./client/var/www:/var/www:cached
+  #   working_dir: /var/www/project
+  #   tty: true
+  #   depends_on:
+  #     - go
+  #     - mysql
