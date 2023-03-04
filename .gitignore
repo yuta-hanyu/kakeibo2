@@ -1,2 +1,6 @@
 mysql/*
 access.log
+tmp/*
+go.mod
+go.sum
+memo.md
