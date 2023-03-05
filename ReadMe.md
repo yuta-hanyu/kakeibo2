@@ -3,11 +3,12 @@
 npm cache clean --force
 docker builder prune
 docker compose up -d
-docker-compose up go
+<!-- docker-compose up go -->
 
 # install後に処理
 go clean -cache
 go mod tidy
+go mod init kakeibo2
 
 docker-compose exec kakeibo2-api bash
 docker-compose exec mysql bash

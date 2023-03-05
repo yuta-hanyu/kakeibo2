@@ -2,10 +2,11 @@ package setups
 
 import (
 	"fmt"
+	"kakeibo2/src/app/controller/users"
 
 	"github.com/kataras/iris/v12/middleware/accesslog"
 	"github.com/kataras/iris/v12/mvc"
-	"github.com/yuta-hanyu/kakeibo-api/src/app/controller/users"
+	// "github.com/yuta-hanyu/kakeibo-api/src/app/controller/users"
 )
 
 // ConfigureUsersControllers
@@ -14,7 +15,7 @@ import (
 func ConfigureUsersControllers(app *mvc.Application) {
 	// ログを取得してくれる機能のDIもここで行う
 	app.Register(accesslog.GetFields)
-	fmt.Println("====")
+	fmt.Println("= == =")
 	// URLが "/users" から始まるリクエストを受け取った際に，
 	// 以下の Controllerを使用させるという指示
 	app.Handle(new(users.UsersController))

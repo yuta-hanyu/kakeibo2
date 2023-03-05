@@ -4,14 +4,15 @@ import (
 
 	// "github.com/kataras/iris"
 
+	"kakeibo2/src/app/controller/users"
+	"kakeibo2/src/app/service"
+	"kakeibo2/src/app/setups"
+
 	"github.com/iris-contrib/middleware/cors"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/middleware/accesslog"
 	"github.com/kataras/iris/v12/middleware/recover"
 	"github.com/kataras/iris/v12/mvc"
-	"github.com/yuta-hanyu/kakeibo-api/src/app/controller/users"
-	"github.com/yuta-hanyu/kakeibo-api/src/app/service"
-	"github.com/yuta-hanyu/kakeibo-api/src/app/setups"
 )
 
 func main() {

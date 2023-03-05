@@ -2,9 +2,10 @@ package service
 
 import (
 	"fmt"
+	"kakeibo2/src/app/model"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/yuta-hanyu/kakeibo-api/src/app/model"
+	// "github.com/yuta-hanyu/kakeibo-api/src/app/model"
 )
 
 type UserService struct{}

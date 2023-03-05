@@ -2,10 +2,10 @@ package users
 
 import (
 	"fmt"
+	"kakeibo2/src/app/model"
+	"kakeibo2/src/app/service"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/yuta-hanyu/kakeibo-api/src/app/model"
-	"github.com/yuta-hanyu/kakeibo-api/src/app/service"
 
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/mvc"
@@ -31,7 +31,7 @@ type UsersController struct {
 func (c *UsersController) GetList() mvc.Response {
 	// 一覧取得
 	users, err := c.UserService.GetUserList()
-	fmt.Printf("=====%v\n", users)
+	fmt.Printf("==== =%v\n", users)
 	if err != nil {
 		return mvc.Response{
 			Code: iris.StatusInternalServerError, // エラーハンドリング

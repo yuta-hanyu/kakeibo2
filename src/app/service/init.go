@@ -3,14 +3,22 @@ package service
 import (
 	"database/sql"
 	"fmt"
+	"kakeibo2/src/app/database/migration"
+	"kakeibo2/src/app/model"
+
 	"log"
 	"os"
 
-	"github.com/yuta-hanyu/kakeibo-api/src/app/model"
-
 	"github.com/go-gorp/gorp"
 	"github.com/joho/godotenv"
-	"github.com/yuta-hanyu/kakeibo-api/src/app/database/migration"
+	// "github.com/yuta-hanyu/kakeibo-api/src/app/model"
+	// "github.com/go-gorp/gorp"
+	// "github.com/joho/godotenv"
+	// "github.com/yuta-hanyu/kakeibo-api/src/app/model"
+	// "github.com/yuta-hanyu/kakeibo-api/src/app/model"
+	// "github.com/go-gorp/gorp"
+	// "github.com/joho/godotenv"
+	// "github.com/yuta-hanyu/kakeibo-api/src/app/database/migration"
 )
 
 // gorp初期化処理

@@ -17,7 +17,7 @@ RUN apk add --no-cache musl-dev
 
 # copy source
 # WORKDIR /go/src/app
-WORKDIR /go/src/github.com/yuta-hanyu/kakeibo-api
+WORKDIR /go/src/app
 
 COPY . .
 
